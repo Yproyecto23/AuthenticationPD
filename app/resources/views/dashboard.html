@@ -1,0 +1,32 @@
+<!--
+  Author: TuNombre
+  Fecha: 2025-05-18
+  Descripción: Página principal del panel de usuario (Dashboard).
+               Muestra mensaje de bienvenida con el nombre de usuario.
+               Incluye botón para cerrar sesión mediante formulario POST con token CSRF.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/app/resources/css/dasborad.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <h2 class="dashboard-welcome">Bienvenido, {{ username }}!</h2>
+        <form action="/logout" method="POST" class="logout-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <button type="submit" class="btn-logout">Cerrar Sesión</button>
+        </form>
+    </header>
+
+    <main class="dashboard-container">
+        <p>Este es tu panel de control.</p>
+    </main>
+
+</body>
+</html>

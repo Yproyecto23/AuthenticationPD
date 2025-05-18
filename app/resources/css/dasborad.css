@@ -1,0 +1,71 @@
+/*
+* Author: TuNombre
+* Fecha: 2025-05-18
+* Descripción: Estilos para el dashboard de usuario.
+*   - Define estilos globales para el body con clase dashboard-body.
+*   - Estilos para el header fijo con fondo azul y texto blanco.
+*   - Estilos para el botón de logout con efectos hover.
+*   - Diseño del contenedor principal del dashboard con sombra y padding.
+*/
+
+body.dashboard-body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+}
+
+.dashboard-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #007BFF;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dashboard-welcome {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.logout-form {
+  margin: 0;
+}
+
+.btn-logout {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #b02a37;
+}
+
+.dashboard-container {
+  padding: 80px 1.5rem 1.5rem; /* espacio para header fijo */
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  min-height: calc(100vh - 60px);
+}
+
+.dashboard-container p {
+  font-size: 1.1rem;
+  color: #333;
+}

@@ -1,0 +1,4 @@
+host=localhost
+dbname=autenticacion_db
+user=root
+password=

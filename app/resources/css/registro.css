@@ -1,0 +1,112 @@
+/*
+* Archivo: registro.css
+* Descripción: Estilos para la página de registro.
+* Autor: TuNombre
+* Fecha: 2025-05-18
+*
+* - Reset básico para box-sizing, márgenes, padding y fuente.
+* - Estilo centrado y fondo claro para el body con clase register-body.
+* - Diseño del contenedor blanco con sombra y bordes redondeados.
+* - Estilos para etiquetas, inputs y botón dentro del formulario de registro.
+* - Efectos hover y focus para inputs y botón.
+* - Caja de error con colores para mensajes de error.
+* - Responsive para pantallas menores a 400px.
+*/
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.register-body {
+  height: 100vh;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.register-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.register-form {
+  text-align: left;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="hidden"] {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #0056b3;
+}
+
+.error-box {
+  background-color: #ffdddd;
+  border: 1px solid #e3342f;
+  color: #cc1f1a;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .register-container {
+    width: 90vw;
+    padding: 1.5rem;
+  }
+}
